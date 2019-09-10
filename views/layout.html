@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CRUD</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+{% block js %}
+ <script type="text/javascript">
+     function validasi_input(form) {
+         if (form.validasiex.value == "") {
+             alert("username not specified");
+             form.validasiex.focus();
+             return (false)
+         }
+         return (true)
+     }
+</script>
+
+        {% block style %}
+        {% block css %}
+
+        
+        <style type="text/css">
+            #register {
+                /* background: rgba(216, 6, 6, 0.966); */
+                width: 120px;
+                height: 40px;
+                position: relative;
+                margin: 15%;
+                margin-left: 45%;
+            }
+
+            #register1 {
+                width: 200px;
+                height: 40px;
+                position: fixed;
+                margin: 12%;
+                margin-left: 44%;
+                position: absolute;
+            }
+
+            #cssform{
+                margin-top: 5px ;
+                border: 5px;
+                float: left;
+                width: 75px;
+                height: 40px;
+                margin-left: 10%;
+            } 
+            #formcss{
+            margin-top: 5px ;
+            border: 5px;
+            float: left;
+            width: 75px;
+            height: 40px;
+            margin-left: 10px;
+            }
+        </style>
+
+    
+
+
+        <body>
+       
+        {% block content %}
+        
+        {% block error %}
+         
+        
+        {% endblock %}
+
+        
+ 
+    </body>
+</html>    
+     

@@ -1,0 +1,62 @@
+{% extends 'layout.html' %}
+
+
+
+{% block content %}
+
+
+
+<!-- {% block cssform %} -->
+<div class="header bg-dark">
+    <h1 class="text-light text-center "> Form Register</h1>
+</div>
+
+    <form method="POST" onsubmit="return validasi_input(this)" name="validasiex">
+
+        <div class="container register-form">
+      
+                <div class="note">
+                    <p>Registration Now.</p>
+                </div>
+
+                <div class="form-content">
+                    <div class="row">
+                        <div class="col-md-6">
+                             <div class="form-group">
+                                <input type="text" class="form-control" name="id_santri"
+                                placeholder="id santri....." 
+                                />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="name_santri" 
+                                placeholder="name santri....."
+                                />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Residence.... " 
+                                name="residence"
+                                />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="number_phone..."
+                                name="number_phone" 
+                                 />
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <button type="submit" class="btn btn-success ml-2 mr-2"         id="cssform">
+                       Submit
+                    </button>
+                    
+                </div>
+            </div>
+     </form>
+<a href="/">
+    <button type="submit" class="btn btn-danger" value="save" id="formcss">
+    Back
+    </button> </a>
+
+
+     {% endblock %}

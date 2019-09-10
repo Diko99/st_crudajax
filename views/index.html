@@ -1,0 +1,55 @@
+{% extends 'layout.html' %}
+
+
+
+{% block content %}
+
+{% block style %} 
+
+        <header class="text-center bg-dark text-light ">
+        <h1 >{{ title }}</h1>
+            </header>
+                  <table class="table table-hover text-center">
+                    <thead>
+                        <tr class="bg-info">
+                        <th scope="col  md-3">Id Santri</th>
+                        <th scope="col  md-3">Name Santri</th>
+                        <th scope="col  md-3">Residence</th>
+                        <th scope="col  md-3">Number Phone</th>
+                        <th scope="col  md-3">Action</th>
+                    </tr>
+                </thead>
+        
+        <tbody>
+        {% for d in data %}
+            <tr>
+                    <td>{{ d.id_santri }}</td>
+                    <td>{{ d.name_santri }}</td>
+                    <td>{{ d.residence }}</td>
+                    <td>{{ d.number_phone }}</td>
+                    <td class="text-center">
+                    <a href="/delete/{{ d.id_santri }}" onclick="return confirm('Are You Sure ?')">
+                    <button class="btn btn-danger">
+                    Remove 
+                    </button></a>
+                    <a href="/update/{{ d.id_santri }}">
+                    <button class="btn btn-dark">
+                               Edit 
+                    </button></a>
+                   </td>
+              </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br>
+    <p id="register1">Not yet Registration ? </p>
+    <a href="/insert">
+    <button class="btn btn-success" id="register">
+    Add Santri
+             </button>
+            </a>
+
+
+
+
+        {% endblock %}
